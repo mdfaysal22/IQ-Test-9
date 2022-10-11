@@ -1,0 +1,7 @@
+.bg-img{
+    background-image: url(./../localImg//home.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
