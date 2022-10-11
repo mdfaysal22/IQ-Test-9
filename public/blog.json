@@ -1,0 +1,20 @@
+[
+    {
+      "id": "6345273356261d7ae2ba1a05",
+      "picture": "https://daqxzxzy8xq3u.cloudfront.net/wp-content/uploads/2019/04/30123219/react-router-dom-feature-img.jpg",
+      "name": "Why use React Router? ",
+      "about": "React Router is an API for React applications. Most current code is written with React Router 3, although version 4 has been released. React Router uses dynamic routing. React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates. React Router uses component structure to call components, which display the appropriate information."
+    },
+    {
+      "id": "634527332a9c2f026dc1a270",
+      "picture": "https://www.loginradius.com/blog/static/157af7ff069ab273224b4718433d9790/03979/title-image.png",
+      "name": "What is it and How it works?",
+      "about": "The React Context API is a way for a React app to effectively produce global variables that can be passed around. This is the alternative to 'prop drilling' or moving props from grandparent to child to parent, and so on. Context is also touted as an easier, lighter approach to state management using Redux.React.createContext() is all you need. It returns a consumer and a provider. Provider is a component that as it's names suggests provides the state to its children. It will hold the 'store' and be the parent of all the components that might need that store. Consumer as it so happens is a component that consumes and uses the state."
+    },
+    {
+      "id": "634527330b5f350bf56488b0",
+      "picture": "https://res.cloudinary.com/practicaldev/image/fetch/s---TllpLY3--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qnwi8ehe64zysba5y195.png",
+      "name": "What is useRef() Hook in React ?",
+      "about": "The useRef hook is the new addition in React Before proceeding to this article there is a prerequisite to know about the ref in React.The useRef is a hook that allows to directly create a reference to the DOM element in the functional component. Syntax: const refContainer = useRef(initialValue); "
+    }
+  ]
