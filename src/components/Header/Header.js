@@ -1,15 +1,15 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from './../localImg/logo.png';
 
 const Header = () => {
   return (
     <header className="bg-cyan-50 z-50  shadow-lg py-5">
       <nav className="flex mx-6 justify-between items-center">
-        <div className="flex items-center">
+        <Link to={'/'} className="flex items-center">
           <img className="w-10 h-10 mr-1" src={logo} alt="" />
           <h1 className="text-xl text-cyan-900 uppercase font-semibold ">IQ Test</h1>
-        </div>
+        </Link>
         <div className="list-none text-cyan-500 font-semibold gap-4 flex justify-center">
           <li className="p-2">
             <NavLink

@@ -1,13 +1,47 @@
 import {faHome} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import SIngleQuiz from './SingleQuiz/SingleQuiz';
+import SingleQuiz from './SingleQuiz/SingleQuiz';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Quiz = () => {
     const quiz = useLoaderData();
     const quizDetails = quiz.data;
     const {name, total, questions} = quizDetails;
+
+    // State For Correct Answer: 
+    const [right, setRight] = useState([]);
+    const [wrong, setWrong] = useState([]);
+    const [exist, setExist] = useState([]);
+    
+    const notify = () => toast(`
+        Your Right Answer ${right.length} 
+        and
+        Your Wrong Answer ${wrong.length}
+    `);
+
+    const checkAns = (correct, submit, id) => {
+        toast(`${correct}`);
+        const existed = exist.find(existed_id => existed_id === id);
+        if(existed){
+            alert('Already Clicked');
+        }else{
+            const newExist = [...exist, id];
+            setExist(newExist);
+            if(correct === submit){
+                const NewRightAns = [...right, correct];
+                setRight(NewRightAns);
+            }else{
+                const newWrongAns = [...wrong, submit];
+                setWrong(newWrongAns);
+            }
+        }
+    }
+
+
+
     return (
         <section className='text-center my-6'>
             <div>
@@ -17,14 +51,15 @@ const Quiz = () => {
                 </div>
                 <div>
                    {
-                    questions.map((singleQuestion, index) => <SIngleQuiz index={index} key={singleQuestion.id} singleQuestion={singleQuestion}></SIngleQuiz>)
+                    questions.map((singleQuestion, index) => <SingleQuiz checkAns={checkAns} index={index} key={singleQuestion.id} singleQuestion={singleQuestion}></SingleQuiz>)
                    }
                 </div>
 
                 <div>
-                    <button className='bg-cyan-600 hover:bg-cyan-800 py-2 px-4 rounded-lg text-white font-semibold m-2 '>
-                        submit 
+                    <button onClick={notify} className='bg-cyan-600 hover:bg-cyan-800 py-2 px-4 rounded-lg text-white font-semibold m-2 '>
+                        submit and See Result
                     </button>
+                    <ToastContainer />
                 </div>
             </div>
 
