@@ -47,7 +47,7 @@ const Quiz = () => {
         <section className='text-center my-6'>
             <div>
                 <div className='bg-img py-6'>
-                    <h1 className='text-cyan-600 text-3xl font-semibold'>Name of Quiz : {name}</h1>
+                    <h1 className='text-cyan-600 text-md md:text-lg lg:text-3xl font-semibold'>Name of Quiz : {name}</h1>
                     <small className='text-cyan-800 font-semibold'>Total Questions {total}</small>
                 </div>
                 <div>
