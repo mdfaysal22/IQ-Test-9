@@ -23,13 +23,6 @@ const Header = () => {
             className={({ isActive }) =>
             isActive ? 'text-yellow-800' : undefined
           }
-            to={"/quiz"}>Quiz</NavLink>
-          </li>
-          <li className="p-2">
-            <NavLink
-            className={({ isActive }) =>
-            isActive ? 'text-yellow-800' : undefined
-          }
             to={"/analytics"}>Analytics</NavLink>
           </li>
           <li className="p-2">

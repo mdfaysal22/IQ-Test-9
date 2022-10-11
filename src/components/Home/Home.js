@@ -4,8 +4,9 @@ import { useLoaderData } from 'react-router-dom';
 import QuizItem from './QuizItem/QuizItem';
 
 const Home = () => {
-    const quizsData = useLoaderData();
-    const quizs = quizsData.data;
+    const quizData = useLoaderData();
+    const quizs = quizData.data;
+   
     return (
         <div>
             <div className='w-full p-16 -z-10 text-center bg-img'>

@@ -15,6 +15,7 @@ function App() {
       children: [
         {
           path:'/',
+          loader: async() => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Home></Home>
         },
         {
@@ -23,7 +24,8 @@ function App() {
           element: <Home></Home>
         },
         {
-          path: '/quiz',
+          path: '/quiz/:id',
+          loader: ({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
           element: <Quiz></Quiz>
         },
         {
