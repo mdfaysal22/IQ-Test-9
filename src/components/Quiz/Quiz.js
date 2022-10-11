@@ -23,7 +23,6 @@ const Quiz = () => {
     `);
 
     const checkAns = (correct, submit, id) => {
-        toast(`${correct}`);
         const existed = exist.find(existed_id => existed_id === id);
         if(existed){
             alert('Already Clicked');
@@ -33,9 +32,11 @@ const Quiz = () => {
             if(correct === submit){
                 const NewRightAns = [...right, correct];
                 setRight(NewRightAns);
+                toast(`Your Answer is Right.`)
             }else{
                 const newWrongAns = [...wrong, submit];
                 setWrong(newWrongAns);
+                toast(`Your Answer is Wrong. Right answer is ${correct}`)
             }
         }
     }
