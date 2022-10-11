@@ -10,7 +10,7 @@ const Blog = () => {
                 <h1 className='text-md md:text-xl lg:text-3xl font-semibold uppercase'>WelCome To Our Blog Page.</h1>
                 <small className='text-xs text-cyan-700 font-semibold'>Available Blog {blogs.length}</small>
             </div>
-            <div className='flex justify-center items-center gap-6'>
+            <div>
                 {
                     blogs.map(blog => <Posts key={blog.id} blog={blog}></Posts>)
                 }
