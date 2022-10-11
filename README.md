@@ -47,8 +47,9 @@ This is a Demo Website to Create and Design for Learning Purpuse.
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. ${params.id} |
 
-## Demo
+## Live Site
 
+[Live-Site](https://iq-test-by-faysal.netlify.app/)
 
 
 
