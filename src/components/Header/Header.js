@@ -6,7 +6,7 @@ import logo from "./../localImg/logo.png";
 
 const Header = () => {
   return (
-    <header className="bg-cyan-50 shadow-lg py-5">
+    <header className="bg-cyan-50 shadow-lg py-2">
       <div className="navbar flex justify-between items-center">
         <Link to={"/"} className="flex items-center">
           <img className="w-10 h-10 mr-1" src={logo} alt="" />
